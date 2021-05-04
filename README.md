@@ -6,7 +6,7 @@
 
 ```bash
 ## to Install the cli tool
-npm i create-react-wordpress-plugin
+npm i @gustavogomez092/create-react-wordpress-plugin -g
 
 ## to use the cli tool
 crwp

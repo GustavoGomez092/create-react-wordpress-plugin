@@ -1,5 +1,5 @@
 {
-  "name": "create-react-wordpress-plugin",
+  "name": "@gustavogomez092/create-react-wordpress-plugin",
   "version": "1.0.0",
   "description": "A CLI to create React plugins on WordPress",
   "main": "src/index.js",
@@ -36,5 +36,14 @@
     "bin/",
     "src/",
     "templates/"
-  ]
+  ],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoGomez092/create-react-wordpress-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GustavoGomez092/create-react-wordpress-plugin/issues"
+  },
+  "homepage": "https://github.com/GustavoGomez092/create-react-wordpress-plugin#readme"
 }
