@@ -139,18 +139,32 @@ if (process.env.NODE_ENV === 'production') {
         {
           test: /\.(scss|css|less)$/,
           use: [{
-            loader: 'style-loader'
+            loader: 'style-loader',
+            options: {
+              insertAt: 'top',
+              insertInto: 'head'
+            }
           }, {
-            loader: 'css-loader' // translates CSS into CommonJS
+            loader: 'css-loader',
+            options: {
+              insertAt: 'top',
+              insertInto: 'head'
+            }
           }, {
-            loader: 'less-loader', // compiles Less to CSS
+            loader: 'less-loader',
             options: {
               lessOptions: {
-                strictMath: true
+                strictMath: true,
+                insertAt: 'top',
+                insertInto: 'head'
               }
             }
           }, {
-            loader: 'sass-loader' // compiles sass to CSS
+            loader: 'sass-loader',
+            options: {
+              insertAt: 'top',
+              insertInto: 'head'
+            }
           }]
         }
       ]
