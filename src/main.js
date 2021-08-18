@@ -55,6 +55,7 @@ async function editFiles (options) {
   const filePath2 = path.join(dir, '\\plugin_options.php')
   const filePath3 = path.join(dir, '\\src\\index.js')
   const filePath4 = path.join(dir, '\\public\\index.html')
+  const filePath5 = path.join(dir, '\\src\\main.scss')
   const safeSpacedNameOptions = `${safeSpacedName}_options`
   const idVersionName = options.pluginName.replace(/\s/g, '-')
 
@@ -83,6 +84,11 @@ async function editFiles (options) {
   const data4 = fs.readFileSync(filePath4, 'utf-8')
   const newValue4 = data4.replace(/<wp-react-plugin>/g, idVersionName)
   fs.writeFileSync(filePath4, newValue4, 'utf-8')
+
+  // file 5
+  const data5 = fs.readFileSync(filePath5, 'utf-8')
+  const newValue5 = data5.replace(/<wp-react-plugin>/g, idVersionName)
+  fs.writeFileSync(filePath5, newValue5, 'utf-8')
 }
 
 async function initGit (options) {
