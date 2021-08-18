@@ -87,7 +87,7 @@ async function editFiles (options) {
 
   // file 5
   const data5 = fs.readFileSync(filePath5, 'utf-8')
-  const newValue5 = data5.replace(/<wp-react-plugin>/g, idVersionName)
+  const newValue5 = data5.replace(/<wp-react-plugin>/g, `#${idVersionName}`)
   fs.writeFileSync(filePath5, newValue5, 'utf-8')
 }
 
