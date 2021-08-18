@@ -46,11 +46,11 @@ function <WP_React_Plugin>_shortcode( $atts ) {
   if(file_exists(dirname(__FILE__) . "/dist/main.js")) {
     $handle .= 'prod';
     wp_enqueue_script( $handle, plugins_url( "/dist/main.js", __FILE__ ), ['wp-element'], '0.1', true );
-    wp_enqueue_style( $handle, plugins_url( "/dist/main.css", __FILE__ ), ['wp-element'], '0.1', 'all' );
+    wp_enqueue_style( $handle, plugins_url( "/dist/main.css", __FILE__ ), false, '0.1', 'all' );
   } else {
     $handle .= 'dev';
     wp_enqueue_script( $handle, 'http://localhost:3000/main.js', ['wp-element'], '0.1', true );
-    wp_enqueue_style( $handle, 'http://localhost:3000/main.css', ['wp-element'], '0.1', 'all' );
+    wp_enqueue_style( $handle, 'http://localhost:3000/main.css', false, '0.1', 'all' );
   }
   return "<div id='<wp-react-plugin>'></div>";
 }
