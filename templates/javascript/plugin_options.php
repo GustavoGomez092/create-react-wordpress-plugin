@@ -45,9 +45,11 @@ class <WP_React_Plugin_Options> {
       if(file_exists(dirname(__FILE__) . "/dist/main.js")) {
         $handle .= 'prod';
         wp_enqueue_script( $handle, plugins_url( "/dist/main.js", __FILE__ ), $dep, '0.1', true );
+        wp_enqueue_style( $handle, plugins_url( "/dist/main.css", __FILE__ ), $dep, '0.1', 'all' );
       } else {
         $handle .= 'dev';
-        wp_enqueue_script( $handle, 'http://localhost:3000/assets/main.js', $dep, '0.1', true );
+        wp_enqueue_script( $handle, 'http://localhost:3000/main.js', $dep, '0.1', true );
+        wp_enqueue_style( $handle, 'http://localhost:3000/main.css', $dep, '0.1', 'all' );
       }
     }
   }

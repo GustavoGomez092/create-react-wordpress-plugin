@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './Components/App/App'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import App from './components/App'
 
-ReactDOM.render(<App />, document.querySelector('#<wp-react-plugin>'))
+ReactDOM.render(<App />, document.getElementById('<wp-react-plugin>'))
